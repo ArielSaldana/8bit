@@ -46,4 +46,25 @@
 
     ctx.closePath();
     ctx.stroke();
+
+    ctx.fillStyle = "#FF0000";
+
+    function getCursorPosition(canvas, event, callback) {
+        const rect = canvas.getBoundingClientRect()
+        const x = (event.clientX - rect.left) / 14
+        const y = (event.clientY - rect.top) / 14
+        callback(x, y)
+        // console.log("x: " + x + " y: " + y)
+    }
+
+    canvas.addEventListener("click", (ev) => {
+        console.log(ev.offsetX, ev.offsetY);
+
+        const rect = canvas.getBoundingClientRect()
+        const x = Math.floor( (event.clientX - rect.left) / 14)
+        const y = Math.floor((event.clientY - rect.top) / 14)
+
+        ctx.fillRect(x, y, 1, 1)
+
+    })
 }())
