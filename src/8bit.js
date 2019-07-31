@@ -4,8 +4,6 @@
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");
 
-    // dot
-
     ctx.fillRect(25, 16, 1, 1);
 
     ctx.fillRect(24, 15, 1, 1);
@@ -45,10 +43,6 @@
     ctx.fillRect(26, 23, 1, 1);
 
     ctx.fillRect(25, 24, 1, 1);
-    // ctx.fillRect(25, 20, 1, 1);
-
-
-
 
     ctx.closePath();
     ctx.stroke();
